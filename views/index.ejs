@@ -5,13 +5,26 @@
 <head>
     <title></title>
     <link rel="stylesheet" type="text/css" href="/stylesheets/bulma.css">
-    <link rel="stylesheet" type="text/css" href="/stylesheets/style.css">
+    <link rel="stylesheet" type="text/css" href="/stylesheets/login.css">
 
 </head>
 
 <body>
 
+<div class="container"></div>
+    <div class="tile is-parent">
+        <article class="tile is-child notification">
+            <p class="title">Wide tile</p>
+            <div class="content">
+                    <% if (user) { %>
+                    <a href="/logout">Log Out</a>
+                    <% } else { %>
+                    <a href="/auth/google">Login with Google</a>
+                    <% } %>
+            </div>
+        </article>
+    </div>
 
-    
+
 </body>
 </html>
