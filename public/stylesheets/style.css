@@ -1,8 +1,92 @@
-body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;1,300&family=Nunito:wght@300;400&family=Parisienne&display=swap');
+
+
+* { 
+    box-sizing: border-box;
+    --mainColor: #ffc93c;
 }
 
-a {
-  color: #00B7FF;
+html, body { 
+  height: 100%;
+  width: 100vw;   }
+
+body { 
+  background-color: #fff; 
+  font-family: 'Nunito', sans-serif;
+  padding: 10px; 
 }
+
+h1 { 
+  color: #07689f; 
+  font-family: 'Parisienne', cursive; 
+  font-size: 40px;; 
+  font-weight: normal; 
+  line-height: 48px; 
+  margin: 0 0 20px; 
+  text-shadow: 1px 1px 2px #082b34; }
+
+
+
+h2 { 
+  color: #40a8c4; 
+  font-family: 'Nunito', cursive;
+  font-weight: bold; 
+}
+
+ a { 
+  font-family: 'Nunito', sans-serif; 
+    position: relative;
+    font-size: 18px; 
+    margin-bottom: 5px; 
+    display: inline-block;
+    background:
+     linear-gradient(
+       to bottom, var(--mainColor) 0%,
+       var(--mainColor) 100%
+     );
+    background-position: 0 100%;
+    background-repeat: repeat-x;
+    background-size: 4px 4px;
+  color: #fff;
+  text-decoration: none;
+  transition: background-size .2s;
+  font-weight: bold; 
+}
+
+ a:hover {
+  background-size: 4px 50px;
+  color: white; 
+}
+
+ a:selected { 
+  background-size: 4px 50px;
+  color: white; 
+}
+
+ul, li { 
+  list-style-type: none;
+  margin-left: 40px; 
+  margin-bottom: 10px; 
+  text-align: justify; 
+}
+
+#sidebar { 
+  background-color: #07689f;
+  padding: 16px; 
+  height: 100vh; 
+  font-size: 20px; 
+  color: #fff; 
+}
+
+#main { 
+  padding: 20px; 
+  margin-top: 150px; 
+  margin-left: 20px; 
+}
+
+.column.rightside { 
+  display: flex; 
+  align-content: flex-end; 
+}
+
+
