@@ -3,12 +3,12 @@
 
 * { 
     box-sizing: border-box;
-    --mainColor: #ffc93c;
+    --mainColor: #40a8c4;
 }
 
 
 body { 
-  background-color: #fff; 
+  background-color: #07689f; 
   font-family: 'Nunito', sans-serif;
   padding: 10px; 
 
@@ -45,7 +45,7 @@ h2 {
     background-position: 0 100%;
     background-repeat: repeat-x;
     background-size: 4px 4px;
-  color: #fff;
+  color: #40a8c4;
   text-decoration: none;
   transition: background-size .2s;
   font-weight: bold; 
@@ -59,18 +59,4 @@ h2 {
  a:selected { 
   background-size: 4px 50px;
   color: white; 
-}
-
-.container { 
-    display: flex; 
-    align-items: center; 
-    justify-content: center;
-    width: 400px; 
-}
-
-
-.tile { 
-    background-color: #07689f; 
-    color: #ffc93c; 
-    width: 400px; 
 }
