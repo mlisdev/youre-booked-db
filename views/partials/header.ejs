@@ -11,20 +11,23 @@
 </head>
 
 <body>
-        <div class="columns">
-            <div class="column is-one-quarter is-full-height" id="sidebar">
-                <center>
-                    <img src="/images/yblogo.png">
-                </center><br />
-    
+<div class="tile is-ancestor">
+    <div class="tile is-parent">
+        <article class="tile is-child box" id="sidenav">
+            <center>
+            <img src="/images/yblogo.png">
+            </center>
+            <div class="content">
                     <ul></ul>
                     <li>do you want to see <a href="/books">Your Books?</a></li>
                     <li>maybe you want to <a href="/books/new">Add A Book</a>?</li>
-                    <li>or maybe post some <a href="/review">Reviews</a>? </li>
+                    <li>or maybe post some <a href="/reviews">Reviews</a>? </li>
                     <li>here is where you
                         <% if (user) { %>
                         <a href="/logout">Log Out</a>
                         <% } %>
                     </li>
-                    </aside>
-                    </div>
+            </div>
+        </article>
+    </div>
+   
