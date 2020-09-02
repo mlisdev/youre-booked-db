@@ -46,7 +46,7 @@ app.use(function (req, res, next) {
 app.use('/', indexRouter);
 app.use('/readers', readersRouter);
 app.use('/books', booksRouter); 
-app.use('/', authorsRouter);
+app.use('/books', authorsRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

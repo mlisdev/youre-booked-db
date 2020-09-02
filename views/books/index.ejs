@@ -3,9 +3,10 @@
 <div class="column is-two-quarters" id="main">
     <section class="container">
         <div class="content is-vcentered" id="your-books">
+            
             <% books.forEach(function(b) { %>
-            <h2><%= b.title %></h2>
-            <h3><%= b.author %></h3>
+            <label><h2><%= b.title %></h2> </label>
+                <div><h3>by <%= b.author  %></h3></div>
             <label>Number of pages:</label>
             <div><%= b.pages %></div>
             <label>Date Started</label>

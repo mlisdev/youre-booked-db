@@ -2,21 +2,12 @@ let mongoose = require('mongoose');
 
 let Schema = mongoose.Schema;
 
-let authorSchema = new Schema({
-    authorName: {
-        type: String,
-        required: true
-    },
-    bipoc: Boolean,
-    queer: Boolean,
-    gender: String
-}) 
-
 let bookSchema = new Schema({
     title: {
         type: String,
         required: true
     }, 
+    author: String,
     pages: Number, 
     startDate: Date, 
     endDate: Date, 
@@ -47,7 +38,6 @@ let bookSchema = new Schema({
         enum: [ 'Print', 'Digital', 'Audiobook' ]
     }, 
     user: { type: Schema.Types.ObjectId, ref: 'Reader' }, 
-    author: [ authorSchema ]
 });
 
 
