@@ -6,14 +6,17 @@ module.exports = {
     index,  
     new: newBook, 
     create, 
-    show
+    show, 
+    edit, 
+    update
+    
 }; 
 
 function index(req, res) {
     console.log(req.query)
     Book.find({'user':req.user._id}, function (err, books) {
-        res.render('books', { title: 'your books', books });
-    });
+        res.render('books/index', { title: 'your books', books });
+    }).sort('-endDate');
 }; 
 
 function newBook(req, res) {
@@ -42,4 +45,23 @@ function show(req, res) {
             res.redirect(`/books/${book._id}`);
         });
     });
+}; 
+
+function edit(req, res) {
+    Book.findById(req.params.id, function (err, book) {
+        if (err) {
+            console.log(err)
+        }
+        else if (!book.user.equals(req.user._id)) return res.redirect('/books');
+        res.render('books/edit', { book });
+    });
+}; 
+
+function update(req, res) {
+    Book.findByIdAndUpdate(req.params.id, req.body, function (err, book) {
+        if (err) {
+            res.render('books/edit', { book, title: 'Edit Book'})
+        }
+        res.redirect(`/books`)
+    })
 }

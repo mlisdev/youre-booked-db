@@ -127,7 +127,7 @@ ul, li {
   font-weight: bold; 
   color: #082b34; 
   border-bottom: 1px dotted #ffc93c; 
-  margin: 5px; 
+  margin: 2px; 
 }
 
 
@@ -138,3 +138,21 @@ input[type=submit] {
 #loginbox { 
   background-color: #07689f; 
 }
+
+input[type=checkbox]{ 
+  margin: 10px; 
+}
+
+input[type=select]{ 
+  margin-bottom: 15px; 
+}
+
+input[type=date]{ 
+  margin-bottom: 5px; 
+}
+
+form label { 
+  font-weight: bold; 
+  margin-top: 5px; 
+}
+

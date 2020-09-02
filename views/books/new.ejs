@@ -12,11 +12,11 @@
         <input class="input is-small" type="number" name="pages">
         <br />
         <label class="label">Date Started</label>
-        <input class="input is-small" type="datetime-local" value="01-01-2020" name="startDate">
+        <input class="input is-small" type="date" value="01-01-2020" name="startDate">
         <br />
         <label class="label">Date Finished</label>
-        <input class="input is-small" type="datetime-local" name="endDate">
-        <br />
+        <input class="input is-small" type="date" name="endDate">
+        <h3>Book Info</h3>
         <label class="label">Fiction or Nonfiction?</label>
         <select class="select is-fullwidth" name="ficType">
             <option value="Fiction">Fiction</option>
@@ -59,9 +59,6 @@
             <option value="Borrowed">Borrowed</option>
             </select>
             <br />
-        <label class="checkbox"><a href="https://www.corinneduyvis.net/ownvoices/" target="_blank">#OwnVoices?</a></label>
-        <input type="checkbox" name="ownVoices" value="true"><label for="true">Yes</label>
-        <br />
         <label class="checkbox">Re-read?</label>
         <input type="checkbox" name="reRead" value="true"><label for="true">Yes</label>
         <br />
@@ -79,6 +76,23 @@
             <option value="Digital">Digital</option>
             <option value="Audiobook">Audiobook</option>
         </select>
+        <h3>Diverse Books Info</h3>
+        <label class="checkbox"><a href="https://www.corinneduyvis.net/ownvoices/" target="_blank">#OwnVoices?</a></label>
+        <input type="checkbox" name="ownVoices" value="true"><label for="true">Yes</label>
+        <br />
+        <label class="label">BIPOC?</label>
+        <select class="select is-fullwidth" name="bipoc">
+            <option value="Author">Author</option>
+            <option value="Protagonist">Protagonist</option>
+            <option value="AuthorProtagonist">Author + Protagonist</option>
+        </select>
+        <label class="label">LGBTQIA+?</label>
+        <select class="select is-fullwidth" name="queer">
+            <option value="Author">Author</option>
+            <option value="Protagonist">Protagonist</option>
+            <option value="AuthorProtagonist">Author + Protagonist</option>
+        </select>
+        
         <input class="button is-info" type="submit" value="Add Book!">
         
 </div>
