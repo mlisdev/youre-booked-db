@@ -4,21 +4,27 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 <head>
-    <title></title>
+    <title>you're booked! reading tracker</title>
     <link rel="stylesheet" type="text/css" href="/stylesheets/bulma.css">
     <link rel="stylesheet" type="text/css" href="/stylesheets/style.css">
 
 </head>
 
 <body>
-    <!-- body columns  -->
-    <div class="columns is-mobile is-full" align="center">
-        <!-- sidebar content -->
-        <div class="column is-one-quarter" id="sidebar">
-            <img src="/images/yblogo.png"><br />
-            <ul> --- </ul>
-            <li>do you want to see <a href="">Your Books?</a></li>
-            <li>maybe you want to <a href="">Add A Book</a>?</li>
-            <li>or maybe post some <a href="">Reviews</a>? </li>
-            <li>here is where you <a href="">Login/Logout</a></li>
-        </div>
+        <div class="columns">
+            <div class="column is-one-quarter is-full-height" id="sidebar">
+                <center>
+                    <img src="/images/yblogo.png">
+                </center><br />
+    
+                    <ul></ul>
+                    <li>do you want to see <a href="/books">Your Books?</a></li>
+                    <li>maybe you want to <a href="/books/new">Add A Book</a>?</li>
+                    <li>or maybe post some <a href="/review">Reviews</a>? </li>
+                    <li>here is where you
+                        <% if (user) { %>
+                        <a href="/logout">Log Out</a>
+                        <% } %>
+                    </li>
+                    </aside>
+                    </div>

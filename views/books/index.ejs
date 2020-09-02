@@ -1,12 +1,40 @@
 <%- include('../partials/header') %>
-    
+
 <div class="column is-two-quarters" id="main">
-    <ul><h1>your current book</h1>
-        <li>
-        <h2>Title: </h2> 
-        </li>
-    </ul>
-    </div>
+    <section class="container">
+        <div class="content is-vcentered" id="your-books">
+            <% books.forEach(function(b) { %>
+            <h2><%= b.title %></h2>
+            <h3><%= b.author %></h3>
+            <label>Number of pages:</label>
+            <div><%= b.pages %></div>
+            <label>Date Started</label>
+            <div><%= b.startDate %></div>
+            <label>Date Finished</label>
+            <div><%= b.endDate %></div>
+            <label>Type</label>
+            <div><%= b.ficType %></div>
+            <label>Format</label>
+            <div><%= b.format %></div>
+            <label>Genre</label>
+            <div><%= b.genre %></div>
+            <label>Source</label>
+            <div><%= b.source %></div>
+            <label>OwnVoices?</label>
+            <div><%= b.ownVoices %></div>
+            <label>Re-Read?</label>
+            <div><%= b.reRead %></div>
+            <label>Reason</label>
+            <div><%= b.reason %></div>
+            <label>Medium</label>
+            <div><<%= b.medium %>/div>
+        </div>
+        <% }); %>
+        
+</div>
+</div>
+</section>
+
 
 
 <%- include('../partials/footer') %>

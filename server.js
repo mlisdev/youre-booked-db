@@ -1,21 +1,25 @@
 var createError = require('http-errors');
 var express = require('express');
 var path = require('path');
+var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 let session = require('express-session');
 let passport = require('passport');
-var logger = require('morgan');
+
+
 require('dotenv').config(); 
+
+var app = express();
+
 require('./config/database');
 require('./config/passport');
 
-let methodOverride = require('method-override')
+let methodOverride = require('method-override'); 
 
-var indexRouter = require('./routes/index');
-var readersRouter = require('./routes/readers');
-var booksRouter = require('./routes/books');
-
-var app = express();
+let indexRouter = require('./routes/index');
+let readersRouter = require('./routes/readers');
+let booksRouter = require('./routes/books');
+let authorsRouter = require('./routes/authors'); 
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -39,11 +43,10 @@ app.use(function (req, res, next) {
   next();
 });
 
-
-
 app.use('/', indexRouter);
 app.use('/readers', readersRouter);
 app.use('/books', booksRouter); 
+app.use('/', authorsRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

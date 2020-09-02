@@ -2,9 +2,8 @@ var express = require('express');
 var router = express.Router();
 const passport = require('passport');
 
-/* GET home page. */
-router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Express' });
+router.get('/', function (req, res) {
+  res.render('index', { title: 'Booked!'});
 });
 
 router.get('/auth/google', passport.authenticate(
@@ -17,14 +16,14 @@ router.get('/oauth2callback', passport.authenticate(
   'google',
   {
     successRedirect: '/books',
-    failureRedirect: '/books'
+    failureRedirect: '/'
   }
 ));
 
 // OAuth logout route
 router.get('/logout', function (req, res) {
   req.logout();
-  res.redirect('/books');
+  res.redirect('/');
 });
 
 module.exports = router;

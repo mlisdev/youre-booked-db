@@ -1,0 +1,86 @@
+<%- include('../partials/header') %>
+
+<div class="column is-two-quarters" id="main">
+    <form action="/books" method="POST">
+        <h1>Add A Book: </h1> 
+        <label class="label">Title</label> 
+        <input class="input is-small" type="text" name="title">
+        <label class="label">Author</label>
+        <input class="input is-small" type="text" name="authorName"> 
+        <label class="label">Total Pages</label>
+        <input class="input is-small" type="number" name="pages">
+        <br />
+        <label class="label">Date Started</label>
+        <input class="input is-small" type="datetime-local" value="01-01-2020" name="startDate">
+        <br />
+        <label class="label">Date Finished</label>
+        <input class="input is-small" type="datetime-local" name="endDate">
+        <br />
+        <label class="label">Fiction or Nonfiction?</label>
+        <select class="select is-fullwidth" name="ficType">
+            <option value="Fiction">Fiction</option>
+            <option value="Non-fiction">Non-Fiction</option>
+        </select>
+        <br />
+        <label class="label">Format</label>
+        <select class="select is-fullwidth" name="format">
+            <option value="Prose">Prose</option>
+            <option value="Poetry">Poetry</option>
+            <option value="Novella">Novella</option>
+            <option value="GraphicNovel">Graphic Novel/Comic</option>
+            <option value="Essay">Essay Collection</option>
+            <option value="ShortStory">Short Story Collection</option>
+            <option value="Play">Play</option>
+        </select>
+        <label class="label">Genre</label>
+        <select class="select is-fullwidth" name="genre">
+            <option value="GeneralFiction">General Fiction</option>
+            <option value="Classics">Classics</option>
+            <option value="Horror">Horror</option>
+            <option value="Mystery/Crime">Mystery/Crime</option>
+            <option value="Historical">Historical</option>
+            <option value="Romance">Romance</option>
+            <option value="Fantasy">Fantasy</option>
+            <option value="Sci-Fi">Sci-Fi</option>
+            <option value="Business/SelfHelp">Business/Self Help</option>
+            <option value="CurrentEvents/Politics">Current Events/Politics</option>
+            <option value="Nature/Science">Nature/Science</option>
+            <option value="Travel/Food">Travel/Food/Comic</option>
+            <option value="Memoir/Biography">Memoir/Biography</option>
+        </select>
+        <label class="label">Source</label>
+        <select class="select is-fullwidth" name="source">
+            <option value="OwnTBR">Own To-Be-Read (TBR)</option>
+            <option value="Purchased2020">Purchased 2020</option>
+            <option value="Library">Library</option>
+            <option value="ReviewCopy">Review Copy</option>
+            <option value="Gift">Gift</option>
+            <option value="Borrowed">Borrowed</option>
+            </select>
+            <br />
+        <label class="checkbox"><a href="https://www.corinneduyvis.net/ownvoices/" target="_blank">#OwnVoices?</a></label>
+        <input type="checkbox" name="ownVoices" value="true"><label for="true">Yes</label>
+        <br />
+        <label class="checkbox">Re-read?</label>
+        <input type="checkbox" name="reRead" value="true"><label for="true">Yes</label>
+        <br />
+        <label class="label">Reason for Reading</label>
+        <select class="select is-fullwidth" name="reason">
+            <option value="Fun">Fun</option>
+            <option value="Work">Work</option>
+            <option value="School">School</option>
+            <option value="BookClub">Book Club</option>
+            <option value="PersonalDevelopment">Personal Development</option>
+        </select>
+        <label class="label">Medium</label>
+        <select class="select is-fullwidth" name="medium">
+            <option value="Print">Print</option>
+            <option value="Digital">Digital</option>
+            <option value="Audiobook">Audiobook</option>
+        </select>
+        <input class="button is-info" type="submit" value="Add Book!">
+        
+</div>
+
+
+<%- include('../partials/footer') %>

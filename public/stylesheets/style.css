@@ -11,8 +11,9 @@ html, body {
   width: 100vw;   }
 
 body { 
-  background-color: #fff; 
+  background-color: #07689f; 
   font-family: 'Nunito', sans-serif;
+  font-size: 14px; 
   padding: 10px; 
 }
 
@@ -29,11 +30,12 @@ h1 {
 
 h2 { 
   color: #40a8c4; 
-  font-family: 'Nunito', cursive;
-  font-weight: bold; 
+  font-family: 'Parisienne', cursive; 
+  background-color: #ffc93c; 
+  font-size: 20px; 
 }
 
- a { 
+#sidebar a { 
   font-family: 'Nunito', sans-serif; 
     position: relative;
     font-size: 18px; 
@@ -48,6 +50,35 @@ h2 {
     background-repeat: repeat-x;
     background-size: 4px 4px;
   color: #fff;
+  text-decoration: none;
+  transition: background-size .2s;
+  font-weight: bold; 
+}
+
+#sidebar a:hover {
+  background-size: 4px 50px;
+  color: white; 
+}
+
+#sidebar a:selected { 
+  background-size: 4px 50px;
+  color: white; 
+}
+
+ a { 
+  font-family: 'Nunito', sans-serif; 
+    position: relative;
+    margin-bottom: 5px; 
+    display: inline-block;
+    background:
+     linear-gradient(
+       to bottom, var(--mainColor) 0%,
+       var(--mainColor) 100%
+     );
+    background-position: 0 100%;
+    background-repeat: repeat-x;
+    background-size: 4px 4px;
+  color: #ffc93c;
   text-decoration: none;
   transition: background-size .2s;
   font-weight: bold; 
@@ -70,6 +101,10 @@ ul, li {
   text-align: justify; 
 }
 
+.box { 
+  background-color: #07689f; 
+}
+
 #sidebar { 
   background-color: #07689f;
   padding: 16px; 
@@ -79,14 +114,28 @@ ul, li {
 }
 
 #main { 
+  background-color: #fff; 
   padding: 20px; 
-  margin-top: 150px; 
-  margin-left: 20px; 
 }
 
-.column.rightside { 
-  display: flex; 
-  align-content: flex-end; 
+#your-books {
+  display: grid;
+  grid-gap: 5px;
+  grid-template-columns: repeat(2, minmax(auto, auto));
 }
 
+#your-books label { 
+  font-weight: bold; 
+  color: #082b34; 
+  border-bottom: 1px dotted #ffc93c; 
+  margin: 5px; 
+}
+
+#rightside { 
+  background-color: #fff; 
+}
+
+input[type=submit] {
+  margin-top: 20px;
+}
 
