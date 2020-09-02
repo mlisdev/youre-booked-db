@@ -27,8 +27,20 @@ let bookSchema = new Schema({
         type: String, 
         enum: [ 'OwnTBR', 'Purchased2020', 'Library', 'ReviewCopy', 'Gift', 'Borrowed' ]
     }, 
-    ownVoices: Boolean, 
-    reRead: Boolean, 
+    ownVoices: { 
+        type: Boolean, 
+        default: false }, 
+    reRead: { 
+        type: Boolean, 
+        default: false }, 
+    bipoc: { 
+        type: String, 
+        enum: [ 'Author', 'Protagonist', 'Author & Protagonist' ] }, 
+    queer: { 
+        type: Boolean, 
+        enum: ['Author', 'Protagonist', 'Author & Protagonist']
+    },
+    gender: String, 
     reason: { 
         type: String, 
         enum: [ 'Fun', 'Work', 'School', 'BookClub', 'PersonalDevelopment']

@@ -1,8 +1,9 @@
 <%- include('../partials/header') %>
 
-<div class="column is-two-quarters" id="main">
+<div class="tile is-parent is-6">
+    <article class="tile is-child box">
+        <h1>add a book</h1>
     <form action="/books" method="POST">
-        <h1>Add A Book: </h1> 
         <label class="label">Title</label> 
         <input class="input is-small" type="text" name="title">
         <label class="label">Author</label>
