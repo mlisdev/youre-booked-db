@@ -1,6 +1,6 @@
 <%- include('../partials/header') %>
 <div class="tile is-parent is-8">
-    <article class="tile is-child box">
+    <article class="tile is-child box" id="maincontent">
         <h1>your books</h1>
         <% books.forEach(function(b) { %>
         <h2><%= b.title %></h2>
@@ -28,6 +28,12 @@
             <div><%= b.medium %></div>
             <label>OwnVoices?</label>
             <div><%= b.ownVoices %></div>
+            <label>BIPOC?</label>
+            <div><%= b.bipoc %></div>
+            <label>LGBTQIA+?</label>
+            <div><%= b.queer %></div>
+            <label>Gender?</label>
+            <div><%= b.gender %></div>
             <label>Edit entry?</label>
             <div><a href="/books/<%= b.id %>/edit">Click here to edit</a></div>
             </div>

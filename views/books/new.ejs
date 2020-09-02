@@ -16,7 +16,7 @@
         <br />
         <label class="label">Date Finished</label>
         <input class="input is-small" type="date" name="endDate">
-        <h3>Book Info</h3>
+        <h3>Reading Info</h3>
         <label class="label">Fiction or Nonfiction?</label>
         <select class="select is-fullwidth" name="ficType">
             <option value="Fiction">Fiction</option>
@@ -91,6 +91,13 @@
             <option value="Author">Author</option>
             <option value="Protagonist">Protagonist</option>
             <option value="AuthorProtagonist">Author + Protagonist</option>
+        </select>
+        <label class="label">Gender?</label>
+        <select class="select is-fullwidth" name="gender">
+            <option value="Female">Female</option>
+            <option value="Male">Male</option>
+            <option value="Non-binary">Non-Binary</option>
+            <option value="Other">Other</option>
         </select>
         
         <input class="button is-info" type="submit" value="Add Book!">

@@ -37,10 +37,12 @@ let bookSchema = new Schema({
         type: String, 
         enum: [ 'Author', 'Protagonist', 'AuthorProtagonist' ] }, 
     queer: { 
-        type: Boolean, 
+        type: String, 
         enum: ['Author', 'Protagonist', 'AuthorProtagonist']
     },
-    gender: String, 
+    gender: { 
+        type: String, 
+        enum: [ 'Female', 'Male', 'Non-binary', 'Other' ]}, 
     reason: { 
         type: String, 
         enum: [ 'Fun', 'Work', 'School', 'BookClub', 'PersonalDevelopment']

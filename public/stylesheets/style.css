@@ -43,6 +43,7 @@ h3 {
   font-family: 'Ninito', sans-serif; 
   font-size: 20px; 
   text-align: center; 
+  margin-top: 5px; 
 }
 
 #sidenav a { 
@@ -117,6 +118,9 @@ ul, li {
   color: #fff;
 }
 
+.maincontent { 
+  width: 500px; 
+}
 #yourbooks { 
   display: grid;
   grid-gap: 5px;
