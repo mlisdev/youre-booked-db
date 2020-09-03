@@ -2,7 +2,7 @@
 <div class="tile is-parent is-8">
     <article class="tile is-child box">
         <h1>edit an entry</h1>
-        <form action="/books" method="POST">
+        <form action="/books?_method=PUT" method="POST">
             <label class="label">Edit Title</label>
             <input class="input is-small" type="text" name="title" value="<%= book.title %>">
             <label class="label">Author</label>
@@ -20,7 +20,7 @@
             <label class="label">Fiction or Nonfiction?</label>
             <select class="select is-fullwidth" name="ficType">
                 <option <%= book.ficType === "Fiction" ? "selected":"" %>>Fiction</option>
-                <option <%= book.ficType === "Non-fiction" ? "selected":"" %>>Non-Fiction</option>
+                <option <%= book.ficType === "Non-fiction" ? "selected":"" %>> Non-Fiction </option>
             </select>
             <br />
             <label class="label">Format</label>
@@ -51,7 +51,7 @@
             </select>
             <label class="label">Source</label>
             <select class="select is-fullwidth" name="source">
-                <option <%= book.source === "OwnTBR" ? "selected":"" %>>Own To-Be-Read (TBR)</option>
+                <option <%= book.source === "OwnTBR" ? "selected":"" %>> Own TBR</option>
                 <option <%= book.source === "Purchased2020" ? "selected":"" %>>Purchased 2020</option>
                 <option <%= book.source === "Library" ? "selected":"" %>>Library</option>
                 <option <%= book.source === "ReviewCopy" ? "selected":"" %>>Review Copy</option>

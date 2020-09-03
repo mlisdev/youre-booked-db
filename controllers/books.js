@@ -9,8 +9,7 @@ module.exports = {
     show, 
     edit, 
     update
-    
-}; 
+};
 
 function index(req, res) {
     console.log(req.query)
@@ -60,8 +59,8 @@ function edit(req, res) {
 function update(req, res) {
     Book.findByIdAndUpdate(req.params.id, req.body, function (err, book) {
         if (err) {
-            res.render('books/edit', { book, title: 'Edit Book'})
+            console.log(err)
         }
-        res.redirect(`/books`)
+            res.redirect(`/books`);
     })
-}
+};  
