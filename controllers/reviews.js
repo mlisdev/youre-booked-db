@@ -3,18 +3,11 @@ const Review = require('../models/review');
 
 
 module.exports = {
-    index, 
     new: newReview,
     create,
-    show, 
     delete: deleteReview
 }; 
 
-function index(req, res) {
-    Review.find({}, function (err, reviews) {
-        res.render('reviews/index', { reviews, title: 'Reviews' })
-    });
-}
 
 function newReview(req, res) {
     res.render('reviews/new', {
@@ -38,21 +31,11 @@ function create(req, res) {
                 title: 'Add Review'
             })
         } else {
-            res.redirect(`/reviews`)
+            res.redirect(`/books`)
         }
     })
 }; 
 
-function show(req, res) {
-    Review.findById(req.params.id)
-        .populate('book').exec(function (err, review) {
-            Book.find(
-                { _id: { $nin: book.review } },
-                function (err, performreviewers) {
-                    console.log(review);
-            res.render('review/index', { title: 'reviews', review, book });
-        });
-})}
 
 function deleteReview(req, res) {
     Review.findByIdAndDelete(req.params.id, function (err) {

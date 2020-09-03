@@ -1,4 +1,5 @@
 const Book = require('../models/book'); 
+const Review = require('../models/review')
 
 
 module.exports = { 
@@ -15,7 +16,9 @@ module.exports = {
 function index(req, res) {
     console.log(req.query)
     Book.find({'user':req.user._id}, function (err, books) {
-        res.render('books/index', { title: 'your books', books });
+        Review.find({}, function (err, reviews) {
+        res.render('books/index', { books, reviews, title: 'your books' });
+        })
     }).sort('-endDate');
 }; 
 

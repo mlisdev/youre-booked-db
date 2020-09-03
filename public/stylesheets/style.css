@@ -14,7 +14,7 @@ html, body {
 body { 
   background-color: #fff; 
   font-family: 'Nunito', sans-serif;
-  font-size: 14px; 
+  font-size: 16px; 
   padding: 10px; 
 }
 
@@ -110,13 +110,13 @@ h3 {
 ul, li { 
   list-style-type: none;
   margin-bottom: 10px; 
-  margin-left: 40px; 
+  margin-left: 20px; 
 }
 
 #sidenav { 
   background-color: #07689f; 
   font-family: 'Ninito', sans-serif; 
-  font-size: 16px; 
+  font-size: 18px; 
   color: #fff;
 }
 
@@ -126,7 +126,7 @@ ul, li {
 #yourbooks { 
   display: grid;
   grid-gap: 5px;
-  grid-template-columns: repeat(2, minmax(auto, auto));
+  grid-template-columns: repeat(2, minmax(05rem, auto));
 }
 
 #yourbooks label { 

@@ -32,10 +32,20 @@
             <div><%= b.bipoc %></div>
             <label>LGBTQIA+?</label>
             <div><%= b.queer %></div>
-            <label>Gender?</label>
+            <label>Author Gender?</label>
             <div><%= b.gender %></div>
+            
             <label>Add Review:</label>
             <div><a href="/books/<%= b._id %>/reviews/new">Add a Rating and/or Review</a></div>
+            <label>Your Current Rating</label>
+            <div>
+                
+                <% reviews.filter(review => review.book.equals(b._id)).forEach(function(review) { %>
+           <%= review.rating %> Stars [ added <%= review.date %>]</div>
+           <label>Your Current Review</label>
+           <div><%= review.review %> 
+           <% });  %></div>
+
             <label>Edit entry?</label>
             <div>
                <a href="/books/<%= b.id %>/edit">Edit Your Entry</a></div>
@@ -52,9 +62,6 @@
                         <% }); %>
         </div>
     </article>
-</div>
-</div>
-</section>
 
 
 
