@@ -61,14 +61,13 @@ function update(req, res) {
         if (err) {
             console.log(err)
         }
-        book.save(function(err){ 
-            res.redirect('/books')
-        })
+        else console.log(book); 
+        res.redirect('/books')
 })}; 
 
 function deleteEntry(req, res){ 
     Book.findByIdAndDelete(req.params.id, function(err, book){ 
         if (err) { 
     console.log(err) }; 
-    res.redirect('/books'); 
+    res.redirect('/books');
 }    )}; 
