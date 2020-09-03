@@ -35,10 +35,10 @@ let bookSchema = new Schema({
         default: false }, 
     bipoc: { 
         type: String, 
-        enum: [ 'Author', 'Protagonist', 'AuthorProtagonist' ] }, 
+        enum: [ 'Neither', 'Author', 'Protagonist', 'AuthorProtagonist' ] }, 
     queer: { 
         type: String, 
-        enum: ['Author', 'Protagonist', 'AuthorProtagonist']
+        enum: [ 'Neither', 'Author', 'Protagonist', 'AuthorProtagonist']
     },
     gender: { 
         type: String, 

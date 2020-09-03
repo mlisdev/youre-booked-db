@@ -2,7 +2,7 @@
 <div class="tile is-parent is-8">
     <article class="tile is-child box">
         <h1>edit an entry</h1>
-        <form action="/books?_method=PUT" method="POST">
+        <form action="/books/<%= book._id %>?_method=PUT" method="POST">
             <label class="label">Edit Title</label>
             <input class="input is-small" type="text" name="title" value="<%= book.title %>">
             <label class="label">Author</label>

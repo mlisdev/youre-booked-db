@@ -7,7 +7,8 @@ module.exports = {
     create, 
     show, 
     edit, 
-    update
+    update, 
+    delete: deleteEntry
 };
 
 function index(req, res) {
@@ -56,10 +57,18 @@ function edit(req, res) {
 }; 
 
 function update(req, res) {
-    Book.findByIdAndUpdate(req.params.id, req.body, function (err, book) {
+    Book.findByIdAndUpdate(req.params.id, function (err, book) {
         if (err) {
             console.log(err)
         }
-            res.redirect(`/books`, {book}); 
-    })
-};  
+        book.save(function(err){ 
+            res.redirect('/books')
+        })
+})}; 
+
+function deleteEntry(req, res){ 
+    Book.findByIdAndDelete(req.params.id, function(err, book){ 
+        if (err) { 
+    console.log(err) }; 
+    res.redirect('/books'); 
+}    )}; 

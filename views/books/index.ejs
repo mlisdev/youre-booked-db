@@ -35,7 +35,17 @@
             <label>Gender?</label>
             <div><%= b.gender %></div>
             <label>Edit entry?</label>
-            <div><a href="/books/<%= b.id %>/edit">Click here to edit</a></div>
+            <div>
+                <button type="submit" class="button is-small is-rounded is-outlined" id="buttonlink"><a href="/books/<%= b.id %>/edit">Edit Your Entry</a></button></div>
+            
+            <label>Delete entry?</label>
+            <div>
+                <% if (user.equals(user._id)) { %>
+                <form action="/books/<%= b ._id %>?_method=DELETE" method="POST">
+                    <button type="submit" class="button is-danger is-small is-rounded">Remove Forever</button>
+                </form>
+                <% }; %>
+            </div>
             </div>
                         <% }); %>
         </div>

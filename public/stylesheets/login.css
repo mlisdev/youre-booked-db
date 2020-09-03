@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;1,300&family=Nunito:wght@300;400&family=Patrick+Hand&display=swap');
+
+
+* { 
+    box-sizing: border-box;
+    --mainColor: #ffc93c;
+    --secColor: #07689f; 
+}
+
+html, body { 
+  height: 100%;
+  width: 100vw;   }
+
+body { 
+  background-color: #07689f; 
+  font-family: 'Nunito', sans-serif;
+  font-size: 20px; 
+  padding: 10px; 
+}
+
+a { 
+  font-family: 'Nunito', sans-serif; 
+    position: relative;
+    margin-bottom: 5px; 
+    display: inline-block;
+    background:
+     linear-gradient(
+       to bottom, var(--secColor) 0%,
+       var(--secColor) 100%
+     );
+    background-position: 0 100%;
+    background-repeat: repeat-x;
+    background-size: 4px 4px;
+  color: #07689f;
+  text-decoration: none;
+  transition: background-size .2s;
+  font-weight: bold; 
+}
+
+ a:hover {
+  background-size: 4px 50px;
+  color: white; 
+}
+
+ a:selected { 
+  background-size: 4px 50px;
+  color: white; 
+}
+
+#loginbox { 
+  background-color: #FFF; 
+}
+
+ul, li { 
+  list-style-type: none;
+  margin-bottom: 10px; 
+    font-size: 20px; 
+}
+
+h2 { 
+  color: #082b34; 
+  font-family: 'Patrick Hand', cursive; 
+  background-color: #ffc93c; 
+  font-size: 24px; 
+  font-weight: bold; 
+  text-align: center; 
+  letter-spacing: 0.2rem; 
+}

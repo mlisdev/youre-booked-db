@@ -1,22 +1,24 @@
 <%- include('partials/login') %>
 
-    <section class="hero is-light is-fullheight">
+    <section class="hero is-fullheight">
         <div class="hero-body">
             <div class="container has-text-centered">
-                <div class="column is-4 is-offset-4">
-                    <p class="subtitle has-text-black">Please login to proceed.</p>
+                <div class="column is-6 is-offset-3">
+                    <img src="/images/yblogo.png">
                     <div class="box" id="loginbox">
-                        <figure class="logo">
-                            <img src="/images/yblogo.png">
-                        </figure>
                         <form>
                             <div class="field">
                                 <div class="control">
+                                    <ul><h2>What would you like to do?</h2></ul>
+                                    <li>Read some <a href="/books/reviews">REVIEWS</a>? </li>
+                                    <li>- OR - </li>
+                                    <li>
                                     <% if (user) { %>
                                     <a href="/logout">Log Out</a>
                                     <% } else { %>
-                                    <a href="/auth/google">Login with Google</a>
-                                    <% } %>
+                                    <a href="/auth/google">LOGIN with Google</a> to start tracking your reading? 
+                                    <% } %> 
+                                </li>
                                 </div>
                             </div>
                 </div>
