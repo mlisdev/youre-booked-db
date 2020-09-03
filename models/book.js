@@ -52,7 +52,6 @@ let bookSchema = new Schema({
         enum: [ 'Print', 'Digital', 'Audiobook' ]
     }, 
     user: { type: Schema.Types.ObjectId, ref: 'Reader' }, 
-    review: { type: Schema.Types.ObjectId, ref: 'Review' }
 });
 
 

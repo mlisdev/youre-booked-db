@@ -19,6 +19,7 @@ let methodOverride = require('method-override');
 let indexRouter = require('./routes/index');
 let readersRouter = require('./routes/readers');
 let booksRouter = require('./routes/books');
+let reviewsRouter = require('./routes/reviews');
  
 
 // view engine setup
@@ -47,6 +48,7 @@ app.use(function (req, res, next) {
 app.use('/', indexRouter);
 app.use('/readers', readersRouter);
 app.use('/books', booksRouter); 
+app.use('/', reviewsRouter); 
 
 
 // catch 404 and forward to error handler

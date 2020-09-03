@@ -34,10 +34,12 @@
             <div><%= b.queer %></div>
             <label>Gender?</label>
             <div><%= b.gender %></div>
+            <label>Add Review:</label>
+            <div><a href="/books/<%= b._id %>/reviews/new">Add a Rating and/or Review</a></div>
             <label>Edit entry?</label>
             <div>
-                <button type="submit" class="button is-small is-rounded is-outlined" id="buttonlink"><a href="/books/<%= b.id %>/edit">Edit Your Entry</a></button></div>
-            
+               <a href="/books/<%= b.id %>/edit">Edit Your Entry</a></div>
+                
             <label>Delete entry?</label>
             <div>
                 <% if (user.equals(user._id)) { %>
@@ -45,10 +47,6 @@
                     <button type="submit" class="button is-danger is-small is-rounded">Remove Forever</button>
                 </form>
                 <% }; %>
-            <label for="rating">Add a Rating:</label>
-            <form method="POST" action="/books/<%= book._id %>/destinations">
-
-                </form>
             </div>
             </div>
                         <% }); %>
