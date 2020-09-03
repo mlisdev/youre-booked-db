@@ -1,27 +1,44 @@
 const Review = require('../models/review');
+const Book = require('../models/book'); 
 
 module.exports = {
+    index, 
     new: newReview,
     create,
     delete: deleteReview
+}; 
+
+function index(req, res) {
+    Review.find({}, function (err, reviews) {
+        res.render('reviews/index', { reviews, title: 'Reviews' })
+    });
 }
 
 function newReview(req, res) {
     res.render('reviews/new', {
-        reviewID: req.params.id,
+        bookID: req.params.id,
         title: 'Add Review'
     })
 }
 
 function create(req, res) {
-    Book.findById(req.params.id, function (err, book) {
-        req.body.userId = req.user._id;
-        req.body.userName = req.user.name;
-        book.comments.push(req.body);
-        book.save(function (err) {
-            res.redirect(`/books/${book._id}`);
-        });
-    });
+    let reviewObj = {
+        book: req.params.id,
+        review: req.body.review,
+        rating: req.body.rating
+    }
+    const newReview = new Review (reviewObj);
+    newReview.save(function (err) {
+        if (err) {
+            console.log(err);
+            res.render('reviews/new', {
+                bookID: req.params.id,
+                title: 'Add Review'
+            })
+        } else {
+            res.redirect(`/reviews`)
+        }
+    })
 }
 
 function deleteReview(req, res) {

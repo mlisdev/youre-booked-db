@@ -3,18 +3,19 @@
 <div class="tile is-parent is-6">
     <article class="tile is-child box">
         <h1>add a rating or review </h1>
-        <form action="/books/<%= book._id %>/reviews" method="POST">
-            <label>Review:</label>
-            <textarea name="content"></textarea>
+        <form action="/books/<%= bookID %>/reviews" method="POST">
             <label>Rating:</label>
-            <select name="rating">
+            <select  class="select is-small is-info" name="rating">
                 <option value="1">1</option>
                 <option value="2">2</option>
                 <option value="3">3</option>
                 <option value="4">4</option>
                 <option value="5">5</option>
-            </select>
-            <button type="submit" class="submit-button is-info is-medium is-rounded">Add Ticket</button>
+                        </select>
+            <label>Review:</label>
+            <textarea name="content"></textarea>
+
+            <button type="submit" class="submit-button is-info is-medium is-rounded">Add Review</button>
         </form>
 </div>
 
