@@ -1,10 +1,12 @@
-const Review = require('../models/review');
 const Book = require('../models/book'); 
+const Review = require('../models/review');
+
 
 module.exports = {
     index, 
     new: newReview,
     create,
+    show, 
     delete: deleteReview
 }; 
 
@@ -39,7 +41,18 @@ function create(req, res) {
             res.redirect(`/reviews`)
         }
     })
-}
+}; 
+
+function show(req, res) {
+    Review.findById(req.params.id)
+        .populate('book').exec(function (err, review) {
+            Book.find(
+                { _id: { $nin: book.review } },
+                function (err, performreviewers) {
+                    console.log(review);
+            res.render('review/index', { title: 'reviews', review, book });
+        });
+})}
 
 function deleteReview(req, res) {
     Review.findByIdAndDelete(req.params.id, function (err) {

@@ -11,6 +11,7 @@ module.exports = {
     delete: deleteEntry
 };
 
+// chris o helped me with this 
 function index(req, res) {
     console.log(req.query)
     Book.find({'user':req.user._id}, function (err, books) {

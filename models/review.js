@@ -3,7 +3,7 @@ let mongoose = require('mongoose');
 let Schema = mongoose.Schema;
 
 let reviewSchema = new mongoose.Schema({
-    content: String,
+    review: String,
     rating: { type: Number, min: 1, max: 5, default: 5 }, 
     book: { type: Schema.Types.ObjectId, ref: 'Book' }
 }, {
