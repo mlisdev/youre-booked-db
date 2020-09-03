@@ -1,6 +1,5 @@
 const Book = require('../models/book'); 
-const book = require('../models/book');
-const { replaceOne } = require('../models/book');
+
 
 module.exports = { 
     index,  
@@ -61,6 +60,6 @@ function update(req, res) {
         if (err) {
             console.log(err)
         }
-            res.redirect(`/books`);
+            res.redirect(`/books`, {book}); 
     })
 };  
