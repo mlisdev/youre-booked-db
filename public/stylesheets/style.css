@@ -58,8 +58,6 @@ h5 {
   margin-bottom: 30px;  
 }
 
-
-
 #sidenav a { 
   font-family: 'Nunito', sans-serif; 
     position: relative;
@@ -95,29 +93,10 @@ h5 {
     position: relative;
     margin-bottom: 5px; 
     display: inline-block;
-    background:
-     linear-gradient(
-       to bottom, var(--secColor) 0%,
-       var(--secColor) 100%
-     );
-    background-position: 0 100%;
-    background-repeat: repeat-x;
-    background-size: 4px 4px;
   color: #07689f;
   text-decoration: none;
-  transition: background-size .2s;
-  font-weight: bold; 
 }
 
- a:hover {
-  background-size: 4px 50px;
-  color: white; 
-}
-
- a:selected { 
-  background-size: 4px 50px;
-  color: white; 
-}
 
 ul, li { 
   list-style-type: none;
@@ -136,6 +115,7 @@ ul, li {
 .maincontent { 
   width: 500px; 
 }
+
 #yourbooks { 
   display: grid;
   grid-gap: 5px;
@@ -172,3 +152,4 @@ form label {
   font-weight: bold; 
   margin-top: 5px; 
 }
+

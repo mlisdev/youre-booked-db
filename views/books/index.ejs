@@ -34,23 +34,23 @@
             <div><%= b.queer %></div>
             <label>Author Gender?</label>
             <div><%= b.gender %></div>
-            
+
             <label>Add Review:</label>
             <div><a href="/books/<%= b._id %>/reviews/new">Add a Rating and/or Review</a></div>
             <label>Your Ratings and Reviews <br />
                 for <%= b.title %></label>
             <div>
-                
+
                 <% reviews.filter(review => review.book.equals(b._id)).forEach(function(review) { %>
-           <b><%= review.rating %> Stars</b>  - <%= review.review %> <br />
-           <%= review.date %><br />
-           <br />
-           <% });  %></div>
+                <b><%= review.rating %> Stars</b> - <%= review.review %> <br />
+                <%= review.date %><br />
+                <br />
+                <% });  %></div>
 
             <label>Edit entry?</label>
             <div>
-               <a href="/books/<%= b.id %>/edit">Edit Your Entry</a></div>
-                
+                <a href="/books/<%= b.id %>/edit">Edit Your Entry</a></div>
+
             <label>Delete entry?</label>
             <div>
                 <% if (user.equals(user._id)) { %>
@@ -59,10 +59,11 @@
                 </form>
                 <% }; %>
             </div>
-            </div>
-                        <% }); %>
         </div>
+        <% }); %>
     </article>
+</div>
+
 
 
 
