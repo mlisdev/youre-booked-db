@@ -37,13 +37,14 @@
             
             <label>Add Review:</label>
             <div><a href="/books/<%= b._id %>/reviews/new">Add a Rating and/or Review</a></div>
-            <label>Your Current Rating</label>
+            <label>Your Ratings and Reviews <br />
+                for <%= b.title %></label>
             <div>
                 
                 <% reviews.filter(review => review.book.equals(b._id)).forEach(function(review) { %>
-           <%= review.rating %> Stars [ added <%= review.date %>]</div>
-           <label>Your Current Review</label>
-           <div><%= review.review %> 
+           <b><%= review.rating %> Stars</b>  - <%= review.review %> <br />
+           <%= review.date %><br />
+           <br />
            <% });  %></div>
 
             <label>Edit entry?</label>

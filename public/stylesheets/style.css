@@ -20,7 +20,7 @@ body {
 
 h1 { 
   color: #07689f; 
-  font-family: 'Ninito', sans-serif; 
+  font-family: 'Nunito', sans-serif; 
   font-size: 40px;; 
   font-weight: normal; 
   line-height: 40px; 
@@ -42,11 +42,23 @@ h2 {
 
 h3 { 
   color: #000; 
-  font-family: 'Ninito', sans-serif; 
+  font-family: 'Nunito', sans-serif; 
   font-size: 20px; 
   text-align: center; 
   margin-top: 5px; 
 }
+
+h5 { 
+  color: #fff; 
+  font-family: 'Patrick Hand', cursive; 
+  font-size: 20px; 
+  font-weight: bold; 
+  text-align: center; 
+  letter-spacing: 0.2rem;
+  margin-bottom: 30px;  
+}
+
+
 
 #sidenav a { 
   font-family: 'Nunito', sans-serif; 
@@ -113,9 +125,10 @@ ul, li {
   margin-left: 20px; 
 }
 
+
 #sidenav { 
   background-color: #07689f; 
-  font-family: 'Ninito', sans-serif; 
+  font-family: 'Nunito', sans-serif; 
   font-size: 18px; 
   color: #fff;
 }
