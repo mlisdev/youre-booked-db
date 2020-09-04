@@ -2,9 +2,9 @@
 <div class="tile is-parent is-8">
     <article class="tile is-child box" id="maincontent">
         <h1>your books</h1>
-        <h3>emtpy screen? Try <a href="/books/new">adding some books! </a></h3>
+        <% if (books.length > 0 ) { %>
         <% books.forEach(function(b) { %>
-        <h2><%= b.title %></h2>
+       <h2><%= b.title %></h2>
         <h3>by <%= b.author %></h3>
         <div class="content" id="yourbooks">
             <label>Number of pages:</label>
@@ -62,6 +62,9 @@
             </div>
         </div>
         <% }); %>
+        <% } else { %>
+    <h3>emtpy screen? Try <a href="/books/new">adding some books! </a></h3> 
+    <% } %>
     </article>
 </div>
 
