@@ -28,14 +28,14 @@
                 <option <%= book.format === "Prose" ? "selected":"" %> value="Prose">Prose</option>
                 <option <%= book.format === "Poetry" ? "selected":"" %> value="Poetry">Poetry</option>
                 <option <%= book.format === "Novella" ? "selected":"" %> value="Novella">Novella</option>
-                <option <%= book.format === "GraphicNovel" ? "selected":"" %> value="GraphicNovel">Graphic Novel/Comic</option>
-                <option <%= book.format === "Essay" ? "selected":"" %> value="Essay">Essay Collection</option>
-                <option <%= book.format === "ShortStory" ? "selected":"" %> value="ShortStory">Short Story Collection</option>
+                <option <%= book.format === "Graphic Novel" ? "selected":"" %> value="Graphic Novel">Graphic Novel/Comic</option>
+                <option <%= book.format === "Essay Collection" ? "selected":"" %> value="Essay Collection">Essay Collection</option>
+                <option <%= book.format === "Short Story" ? "selected":"" %> value="Short Story">Short Story Collection</option>
                 <option <%= book.format === "Play" ? "selected":"" %> value="Play">Play</option>
             </select>
             <label class="label">Genre</label>
             <select class="select is-fullwidth" name="genre">
-                <option <%= book.genre === "GeneralFiction" ? "selected":"" %> value="GeneralFiction">General Fiction</option>
+                <option <%= book.genre === "GeneralFiction" ? "selected":"" %> value="General Fiction">General Fiction</option>
                 <option <%= book.genre === "Classics" ? "selected":"" %> value="Classics">Classics</option>
                 <option <%= book.genre === "Horror" ? "selected":"" %> value="Horror">Horror</option>
                 <option <%= book.genre === "Mystery/Crime" ? "selected":"" %> value="Mystery/Crime">Mystery/Crime</option>
@@ -51,10 +51,10 @@
             </select>
             <label class="label">Source</label>
             <select class="select is-fullwidth" name="source">
-                <option <%= book.source === "OwnTBR" ? "selected":"" %> value="OwnTBR"> Own TBR</option>
-                <option <%= book.source === "Purchased2020" ? "selected":"" %> value="Purchased2020">Purchased 2020</option>
+                <option <%= book.source === "Owned/To Be Read" ? "selected":"" %> value="Owned/To Be Read"> Own TBR</option>
+                <option <%= book.source === "Purchased" ? "selected":"" %> value="Purchased">Purchased 2020</option>
                 <option <%= book.source === "Library" ? "selected":"" %> value="Library">Library</option>
-                <option <%= book.source === "ReviewCopy" ? "selected":"" %> value="ReviewCopy">Review Copy</option>
+                <option <%= book.source === "Review Copy" ? "selected":"" %> value="Review Copy">Review Copy</option>
                 <option <%= book.source === "Gift" ? "selected":"" %> value="Gift">Gift</option>
                 <option <%= book.source === "Borrowed" ? "selected":"" %> value="Borrowed">Borrowed</option>
             </select>
@@ -66,8 +66,8 @@
                 <option <%= book.reason === "Fun" ? "selected":"" %> value="Fun">Fun</option>
                 <option <%= book.reason === "Work" ? "selected":"" %> value="Work">Work</option>
                 <option <%= book.reason === "School" ? "selected":"" %> value="School"> School</option>
-                <option <%= book.reason === "BookClub" ? "selected":"" %> value="BookClub">Book Club</option>
-                <option <%= book.reason === "PersonalDevelopment" ? "selected":"" %> value="PersonalDevelopment" >Personal Development</option>
+                <option <%= book.reason === "Book Club" ? "selected":"" %> value="Book Club">Book Club</option>
+                <option <%= book.reason === "Personal Development" ? "selected":"" %> value="Personal Development" >Personal Development</option>
             </select>
             <label class="label">Medium</label>
             <select class="select is-fullwidth" name="medium">
@@ -85,13 +85,13 @@
             <select class="select is-fullwidth" name="bipoc">
                 <option <%= book.bipoc === "Author" ? "selected":"" %> value="Author">Author</option>
                 <option <%= book.bipoc === "Protagonist" ? "selected":"" %> value="Protagonist">Protagonist</option>
-                <option <%= book.bipoc === "AuthorProtagonist" ? "selected":"" %> value="AuthorProtagonist">Author + Protagonist</option>
+                <option <%= book.bipoc === "Author and Protagonist" ? "selected":"" %> value="Author and Protagonist">Author + Protagonist</option>
             </select>
             <label class="label">LGBTQIA+?</label>
             <select class="select is-fullwidth" name="queer">
                 <option <%= book.queer === "Author" ? "selected":"" %> value="Author">Author</option>
                 <option <%= book.queer === "Protagonist" ? "selected":"" %> value="Protagonist">Protagonist</option>
-                <option <%= book.queer === "AuthorProtagonist" ? "selected":"" %> value="AuthorProtagonist">Author + Protagonist</option>
+                <option <%= book.queer === "Author and Protagonist" ? "selected":"" %> value="Author and Protagonist">Author + Protagonist</option>
             </select>
             <label class="label">Gender?</label>
             <select class="select is-fullwidth" name="gender">
