@@ -19,6 +19,10 @@ body {
 }
 
 a { 
+  color: #07689f; 
+}
+
+.control a { 
   font-family: 'Nunito', sans-serif; 
     position: relative;
     margin-bottom: 5px; 
@@ -37,12 +41,12 @@ a {
   font-weight: bold; 
 }
 
- a:hover {
+.control a:hover {
   background-size: 4px 50px;
   color: white; 
 }
 
- a:selected { 
+.comtrol a:selected { 
   background-size: 4px 50px;
   color: white; 
 }
