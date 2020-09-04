@@ -8,5 +8,7 @@ Using a spreadsheet saved to your computer to track your reading is less than id
 2. It's an enormous spreadsheet with all kinds of data on it and I just **keep** adding more to it. 
 
 When the second SEI project was building a CRUD application, I knew immediately what I wanted to do -- a private, web based reading tracker! It solves all my issues with the spreadsheet, AND it's mobile. 
+
 What a win! 
+
 --- 
