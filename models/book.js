@@ -17,15 +17,15 @@ let bookSchema = new Schema({
     }, 
     format: { 
         type: String, 
-        enum: [ 'Prose', 'Poetry', 'Novella', 'GraphicNovel', 'EssayCollection', 'ShortStory', 'Play']
+        enum: [ 'Prose', 'Poetry', 'Novella', 'Graphic Novel', 'Essay Collection', 'Short Story', 'Play']
     }, 
     genre: { 
         type: String, 
-        enum: [ 'Business/SelfHelp', 'CurrentEvents/Politics', 'Nature/Science', 'Travel/Food', 'Memoir/Biography', 'GeneralFiction', 'Classics', 'Horror', 'Mystery/Crime', 'Historical', 'Romance', 'Fantasy', 'Sci-Fi']
+        enum: [ 'Business/SelfHelp', 'CurrentEvents/Politics', 'Nature/Science', 'Travel/Food', 'Memoir/Biography', 'General Fiction', 'Classics', 'Horror', 'Mystery/Crime', 'Historical', 'Romance', 'Fantasy', 'Sci-Fi']
     }, 
     source: { 
         type: String, 
-        enum: [ 'OwnTBR', 'Purchased2020', 'Library', 'ReviewCopy', 'Gift', 'Borrowed' ]
+        enum: [ 'Owned/To Be Read', 'Purchased', 'Library', 'Review Copy', 'Gift', 'Borrowed' ]
     }, 
     ownVoices: { 
         type: Boolean, 
@@ -35,17 +35,17 @@ let bookSchema = new Schema({
         default: false }, 
     bipoc: { 
         type: String, 
-        enum: [ 'Neither', 'Author', 'Protagonist', 'AuthorProtagonist' ] }, 
+        enum: [ 'Neither', 'Author', 'Protagonist', 'Author and Protagonist' ] }, 
     queer: { 
         type: String, 
-        enum: [ 'Neither', 'Author', 'Protagonist', 'AuthorProtagonist']
+        enum: [ 'Neither', 'Author', 'Protagonist', 'Author and Protagonist']
     },
     gender: { 
         type: String, 
         enum: [ 'Female', 'Male', 'Non-binary', 'Other' ]}, 
     reason: { 
         type: String, 
-        enum: [ 'Fun', 'Work', 'School', 'BookClub', 'PersonalDevelopment']
+        enum: [ 'Fun', 'Work', 'School', 'Book Club', 'Personal Development']
     }, 
     medium: { 
         type: String, 

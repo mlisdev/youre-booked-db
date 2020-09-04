@@ -9,9 +9,9 @@
             <label>Number of pages:</label>
             <div><%= b.pages %></div>
             <label>Date Started</label>
-            <div><%= b.startDate %></div>
+            <div><%= b.startDate.toLocaleDateString() %></div>
             <label>Date Finished</label>
-            <div><%= b.endDate %></div>
+            <div><%= b.endDate.toLocaleDateString() %></div>
             <label>Type</label>
             <div><%= b.ficType %></div>
             <label>Format</label>
@@ -21,13 +21,13 @@
             <label>Source</label>
             <div><%= b.source %></div>
             <label>Are you re-reading this book?</label>
-            <div><%= b.reRead %></div>
+            <div><%= b.reRead ? 'Of course!' : 'Nope - First time'%></div>
             <label>Reason for reading</label>
             <div><%= b.reason %></div>
             <label>Medium</label>
             <div><%= b.medium %></div>
             <label>OwnVoices?</label>
-            <div><%= b.ownVoices %></div>
+            <div><%= b.ownVoices ? 'Yes' : 'No'%></div>
             <label>BIPOC?</label>
             <div><%= b.bipoc %></div>
             <label>LGBTQIA+?</label>
@@ -43,7 +43,7 @@
 
                 <% reviews.filter(review => review.book.equals(b._id)).forEach(function(review) { %>
                 <b><%= review.rating %> Stars</b> - <%= review.review %> <br />
-                <%= review.date %><br />
+                <%= review.date.toLocaleDateString() %><br />
                 <br />
                 <% });  %></div>
 
