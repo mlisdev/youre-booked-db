@@ -1,5 +1,6 @@
 const Book = require('../models/book'); 
-const Review = require('../models/review')
+const Review = require('../models/review'); 
+const moment = require('moment'); 
 
 
 module.exports = { 
@@ -17,7 +18,7 @@ function index(req, res) {
     console.log(req.query)
     Book.find({'user':req.user._id}, function (err, books) {
         Review.find({}, function (err, reviews) {
-        res.render('books/index', { books, reviews, title: 'your books' });
+        res.render('books/index', { books, reviews, moment, title: 'your books' });
         })
     }).sort('-endDate');
 }; 
@@ -56,7 +57,9 @@ function edit(req, res) {
             console.log(err)
         }
         else if (!book.user.equals(req.user._id)) return res.redirect('/books');
-        res.render('books/edit', { book });
+        // let startDt = book._id.startDate; 
+        // let endDt = book._id.endDate; 
+        res.render('books/edit', { book, moment });
     });
 }; 
 

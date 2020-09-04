@@ -9,9 +9,9 @@
             <label>Number of pages:</label>
             <div><%= b.pages %></div>
             <label>Date Started</label>
-            <div><%= b.startDate %></div>
+            <div><%= moment(b.startDate).format("MMM Do, YYYY") %></div>
             <label>Date Finished</label>
-            <div><%= b.endDate %></div>
+            <div><%= moment(b.endDate).format("MMM Do, YYYY") %></div>
             <label>Type</label>
             <div><%= b.ficType %></div>
             <label>Format</label>
@@ -43,7 +43,7 @@
 
                 <% reviews.filter(review => review.book.equals(b._id)).forEach(function(review) { %>
                 <b><%= review.rating %> Stars</b> - <%= review.review %> <br />
-                <%= review.date.toLocaleDateString() %><br />
+                <%= moment(review.date).format("MMM Do, YYYY") %><br />
                 <br />
                 <% });  %></div>
 

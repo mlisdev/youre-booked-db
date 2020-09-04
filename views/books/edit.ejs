@@ -11,7 +11,7 @@
             <input class="input is-small" type="number" name="pages" value="<%= book.pages %>">
             <br />
             <label class="label">Date Started</label>
-            <input class="input is-small" type="date" value="01-01-2020" name="startDate" value="<%= book.startDate %>">
+            <div><%= moment(book.startDate).format("MMM Do, YYYY") %></div>
             <br />
             <label class="label">Date Finished</label>
             <input class="input is-small" type="datetime-local" name="endDate" value="<%= book.endDate %>">
