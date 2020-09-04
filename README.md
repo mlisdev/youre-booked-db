@@ -57,11 +57,10 @@ After a user enters a review, it renders within the book entry on the main page.
 --- 
 #### Next Steps (Ice Box)
 * There are a lot of bugs I want to fix. 
-  * When you edit a book, it clears out the dates previously entered. 
+  * When you edit a book, it clears out the dates previously entered. I've locked it so that a user can't edit their "start date" for a book, but it clears out the end date if they click that "edit" button. Pretty annoying bug. 
   * Currently users can set a future date on a book. I'd like to limit it to the current date. 
   * Users can set negative page numbers, which is just an annoying little thing more than an actual bug. 
   * If a user get logged out, it just shows an error of "_id" undefined. I'd like to fix that to route to an error page, if possible. 
-  * The date renders with the full time after it. I want to render that with just the date. 
 * I want to add more basic CRUD across the platform, including the ability to edit reviews. 
 * I'd like for the platform to include some ability to create data viz using the stats for a user's books -- such as the ability to show a pie chart of how many authors of what gender, or the ability to render quick statistics for a user based on average length of book, average rating, etc.. 
 * While I don't like being able to see other's reviews or comments on the books I've read, I know the other people find them valuable. I'd love to add details pages for the books that have been entered that includes the reviews and ratings, possibly without a user name or avatar attached. Fully anonymous! 
